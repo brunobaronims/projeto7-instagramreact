@@ -1,5 +1,5 @@
 function Corpo() {
-  return;
+  return null;
 }
 
 export default Corpo;
