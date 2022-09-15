@@ -1,5 +1,3 @@
-function SideBar() {
+export default function SideBar() {
   return null;
 }
-
-export default SideBar;

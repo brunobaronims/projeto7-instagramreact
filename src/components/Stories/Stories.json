@@ -1,0 +1,34 @@
+[
+    {
+        "name": "9gag",
+        "image": "./img/9gag.svg"
+    },
+    {
+        "name": "meowed",
+        "image": "./img/meowed.svg"
+    },
+    {
+        "name": "barked",
+        "image": "./img/barked.svg"
+    },
+    {
+        "name": "nathanwpylestrangeplanet",
+        "image": "./img/nathanwpylestrangeplanet.svg"
+    },
+    {
+        "name": "wawawicomics",
+        "image": "./img/wawawicomics.svg"
+    },
+    {
+        "name": "respondeai",
+        "image": "./img/respondeai.svg"
+    },
+    {
+        "name": "filomoderna",
+        "image": "./img/filomoderna.svg"
+    },
+    {
+        "name": "memeriagourmet",
+        "image": "./img/memeriagourmet.svg"
+    }
+]

@@ -1,6 +1,6 @@
 import './styles/App.css';
-import Corpo from './components/Corpo.js';
-import NavBar from './components/NavBar.js';
+import Corpo from './components/Corpo';
+import NavBar from './components/NavBar';
 
 function App() {
   return (

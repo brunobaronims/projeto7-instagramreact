@@ -1,12 +1,10 @@
-import logo from '../img/logo.png';
-
-function NavBar() {
+export default function NavBar() {
   return (
     <header className='navbar'>
       <div className='navbar-content'>  
         <div className='navbar-logo'>
           <ion-icon name="logo-instagram" />
-          <img src={logo} alt='Logo' />
+          <img src='~/img/logo.png' alt='Logo' />
         </div>
         <input placeholder='Pesquisar'></input>
         <div className='navbar-icons'>
@@ -19,5 +17,3 @@ function NavBar() {
     </header>
   );
 }
-
-export default NavBar;

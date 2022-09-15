@@ -1,10 +1,12 @@
-import Posts from "./Posts";
+import Posts from "./Posts/Posts";
 import SideBar from "./SideBar";
+import Stories from "./Stories/Stories";
 
-function Corpo() {
+export default function Corpo() {
   return (
     <main className='all-content'>
       <section className='posts-section'>
+        <Stories />
         <Posts />
       </section>
       <section className='sidebar-section'>
@@ -13,5 +15,3 @@ function Corpo() {
     </main>
   );
 }
-
-export default Corpo;
