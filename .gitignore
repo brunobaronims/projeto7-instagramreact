@@ -12,9 +12,8 @@
 /build
 
 # misc
-*.scss
 *.Identifier
-*.map
+*css.map
 
 .DS_Store
 .env.local

@@ -1,0 +1,9 @@
+.all-content {
+    justify-content: space-between;
+    width: 50rem;
+}
+
+.posts-section, .sidebar-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
