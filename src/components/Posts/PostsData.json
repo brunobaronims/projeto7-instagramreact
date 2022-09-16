@@ -9,7 +9,21 @@
             "image": "./img/respondeai.svg",
             "likes": {
                 "latest": "respondeai",
-                "total": "101.523"
+                "total": "101523"
+            }
+        }
+    },
+    {
+        "profile": {
+            "image": "./img/barked.svg",
+            "name": "barked"
+        },
+        "image": "./img/dog.svg",
+        "caption": {
+            "image": "./img/adorable_animals.svg",
+            "likes": {
+                "latest": "adorable_animals",
+                "total": "99159"
             }
         }
     }

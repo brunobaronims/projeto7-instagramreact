@@ -3,14 +3,6 @@
     width: 50rem;
 }
 
-.post, .posts-container, .posts-section, .sidebar-section {
-    flex-direction: column;
-}
-
-.posts-section, .sidebar-section {
-    justify-content: space-evenly;
-}
-
 .stories-container ul {
     margin: 0;
 
@@ -26,6 +18,15 @@
     }
 }
 
-.post-caption {
+.stories-container ul, .posts-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+.post, .posts-container ul, .posts-section, .sidebar-section, .post-caption {
     flex-direction: column;
+}
+
+.posts-section, .sidebar-section {
+    justify-content: space-evenly;
 }
