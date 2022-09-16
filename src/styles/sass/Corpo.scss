@@ -1,21 +1,66 @@
 .all-content {
     justify-content: space-between;
     width: 50rem;
+    margin-top: 6rem;
 }
 
 .stories-container ul {
     margin: 0;
+    position: relative;
+    align-items: center;
+    border-radius: 0.3rem;
+    border: 0.1rem solid #DBDBDB;
+    height: 8.5rem;
 
     li {
         flex-direction: column;
         align-items: center;
+        width: 5.4rem;
+        justify-content: space-between;
+        height: 6rem;
+    }
+
+    li:first-child {
+        margin-left: 0.8rem;
+    }
+
+    li:last-child {
+        margin-right: 0.8rem;
+    }
+
+    p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: #000;
         overflow: hidden;
-        width: 5rem;
+        text-overflow: ellipsis;
+        max-width: 66px;
+        display: block;
+    }
+
+    img, ion-icon {
+        display: block;
     }
 
     img {
-        display: block;
+        position: absolute;
+        margin: 5px 0 0 5px;
     }
+
+    ion-icon {
+        font-size: 2rem;
+        position: absolute;
+        color: #FFF;
+        right: 1rem;
+        filter: drop-shadow(0 0 0.1rem rgb(120, 120, 120));
+    }
+}
+
+.story-background {
+    position: relative!important;
+    top: 0!important;
+    left: 0!important;
+    margin: 0!important;
 }
 
 .stories-container ul, .posts-container ul {

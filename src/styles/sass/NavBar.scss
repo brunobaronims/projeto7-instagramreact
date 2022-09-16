@@ -1,10 +1,47 @@
-.navbar-content {
-    width: 60rem;
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+    height: 4rem;
+    background-color: #FFF;
+    border-bottom: 0.1rem solid #DBDBDB;
+    font-size: 1.6rem;
+
+    img {
+        margin-top: 0.4rem;
+    }
+
+    input {
+        height: 2rem;
+        width: 15rem;
+        justify-content: center;
+        text-align: center;
+        background-color: #fafafa;
+        border-radius: 0.3rem;
+        border: 0.1rem solid #DBDBDB;
+        color: #979797;
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
+
+.navbar-logo, .navbar-icons, .navbar-content {
     align-items: center;
     justify-content: space-between;
 }
 
-.navbar {
-    width: 100%;
-    justify-content: center;
+.navbar-content {
+    width: 60rem;
+}
+
+.navbar-logo {
+    width: 10.5rem;
+}
+
+.navbar-icons {
+    width: 8.5rem;
 }
