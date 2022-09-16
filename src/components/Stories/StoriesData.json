@@ -1,34 +1,34 @@
 [
     {
-        "name": "9gag",
+        "profile": "9gag",
         "image": "./img/9gag.svg"
     },
     {
-        "name": "meowed",
+        "profile": "meowed",
         "image": "./img/meowed.svg"
     },
     {
-        "name": "barked",
+        "profile": "barked",
         "image": "./img/barked.svg"
     },
     {
-        "name": "nathanwpylestrangeplanet",
+        "profile": "nathanwpylestrangeplanet",
         "image": "./img/nathanwpylestrangeplanet.svg"
     },
     {
-        "name": "wawawicomics",
+        "profile": "wawawicomics",
         "image": "./img/wawawicomics.svg"
     },
     {
-        "name": "respondeai",
+        "profile": "respondeai",
         "image": "./img/respondeai.svg"
     },
     {
-        "name": "filomoderna",
+        "profile": "filomoderna",
         "image": "./img/filomoderna.svg"
     },
     {
-        "name": "memeriagourmet",
+        "profile": "memeriagourmet",
         "image": "./img/memeriagourmet.svg"
     }
 ]

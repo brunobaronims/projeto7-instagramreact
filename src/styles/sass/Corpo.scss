@@ -3,8 +3,11 @@
     width: 50rem;
 }
 
-.posts-section, .sidebar-section {
+.post, .posts-container, .posts-section, .sidebar-section {
     flex-direction: column;
+}
+
+.posts-section, .sidebar-section {
     justify-content: space-evenly;
 }
 
@@ -21,4 +24,8 @@
     img {
         display: block;
     }
+}
+
+.post-caption {
+    flex-direction: column;
 }

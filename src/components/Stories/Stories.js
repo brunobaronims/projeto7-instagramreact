@@ -1,19 +1,19 @@
 import Story from "./Story";
 
 export default function Stories () {
-  const data = require('./Stories.json');
-  console.log(data);
+  const data = require('./StoriesData.json');
 
   return (
     <div className='stories-container'>
       <ul>
         {
-          data.map((s, index) => {
+          data.map((item, index) => {
             return (
-              <Story key={index} data={s}></Story>
+              <Story key={index} data={item}></Story>
             );
           })
         }
+        <ion-icon name="chevron-forward-circle" />
       </ul>
     </div>
   );
