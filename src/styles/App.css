@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .navbar {
   position: fixed;
   top: 0;
@@ -259,6 +260,7 @@
   font-weight: 500;
 }
 .suggestion-content p {
+  width: fit-content;
   margin: 0;
   color: rgb(145, 145, 145);
 }
@@ -267,6 +269,41 @@
   align-items: center;
   font-weight: 900;
   color: #139EF2;
+}
+
+.links {
+  flex-wrap: wrap;
+  white-space: pre;
+  margin-top: 2rem;
+}
+
+.links div:not(:last-child):after {
+  content: " • ";
+}
+
+.links div,
+.link,
+.copyright {
+  color: rgb(189, 188, 188);
+  font-weight: 500;
+}
+
+.links div {
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.copyright {
+  margin-bottom: 0;
+  font-size: 0.75rem;
 }
 
 .root {
@@ -282,6 +319,24 @@
   width: 100%;
   flex-direction: column;
   align-items: center;
+}
+
+.link,
+.suggestions-header strong:last-child,
+.follow-button,
+.suggestion-content div strong,
+.suggestion-content div p,
+.sidebar-user img,
+.sidebar-user strong,
+ion-icon,
+.navbar-logo img,
+.story p,
+.story-image img:last-child,
+.post-header img,
+.post-header p,
+.post-caption img,
+.post-caption strong {
+  cursor: pointer;
 }
 
 html,

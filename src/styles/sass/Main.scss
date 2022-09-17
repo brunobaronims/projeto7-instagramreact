@@ -12,3 +12,22 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+.link,
+.suggestions-header strong:last-child,
+.follow-button,
+.suggestion-content div strong,
+.suggestion-content div p,
+.sidebar-user img,
+.sidebar-user strong,
+ion-icon,
+.navbar-logo img,
+.story p,
+.story-image img:last-child,
+.post-header img,
+.post-header p,
+.post-caption img,
+.post-caption strong {
+    cursor: pointer;
+}
