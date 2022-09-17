@@ -52,7 +52,7 @@
 
 .all-content {
   justify-content: space-between;
-  width: 70rem;
+  width: 67rem;
   margin-top: 6rem;
 }
 
@@ -78,15 +78,13 @@
 }
 .post-header div {
   align-items: center;
-  justify-content: space-between;
-  width: 6.8rem;
 }
 .post-header img {
   height: auto;
   width: 2.3rem;
 }
 .post-header p {
-  margin: 0;
+  margin: 0 0 0 0.6rem;
   height: fit-content;
   font-weight: 500;
 }
@@ -134,20 +132,23 @@
   border: 0.1rem solid #DBDBDB;
   height: 8.5rem;
 }
-.stories-container ul li {
+.stories-container ul ion-icon {
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  color: #FFF;
+  right: 1rem;
+  filter: drop-shadow(0 0 0.1rem rgb(120, 120, 120));
+}
+
+.story {
   flex-direction: column;
   align-items: center;
   width: 5.4rem;
   justify-content: space-between;
   height: 6rem;
 }
-.stories-container ul li:first-child {
-  margin-left: 0.8rem;
-}
-.stories-container ul li:last-child {
-  margin-right: 0.8rem;
-}
-.stories-container ul p {
+.story p {
   margin: 0;
   font-size: 0.85rem;
   overflow: hidden;
@@ -156,19 +157,18 @@
   display: block;
   font-weight: 500;
 }
-.stories-container ul img, .stories-container ul ion-icon {
+.story img {
   display: block;
-}
-.stories-container ul img {
   position: absolute;
   margin: 5px 0 0 5px;
 }
-.stories-container ul ion-icon {
-  font-size: 2rem;
-  position: absolute;
-  color: #FFF;
-  right: 1rem;
-  filter: drop-shadow(0 0 0.1rem rgb(120, 120, 120));
+
+.story:first-child {
+  margin-left: 0.8rem;
+}
+
+.story:last-child {
+  margin-right: 0.8rem;
 }
 
 .story-background {
@@ -178,12 +178,17 @@
   margin: 0 !important;
 }
 
-.stories-container ul, .posts-container ul {
+.stories-container ul,
+.posts-container ul {
   margin: 0;
   padding: 0;
 }
 
-.post, .posts-container ul, .posts-section, .sidebar-section, .post-caption {
+.post,
+.posts-container ul,
+.posts-section,
+.sidebar-section,
+.post-caption {
   flex-direction: column;
 }
 
@@ -196,20 +201,18 @@
   padding-top: 1.8rem;
 }
 
-.sidebar, .sidebar-user div {
+.sidebar,
+.sidebar-user div {
   flex-direction: column;
 }
 
 .sidebar {
-  width: 24rem;
+  width: 21rem;
 }
 
-.sidebar-user {
-  width: 11.5rem;
-  justify-content: space-between;
-}
 .sidebar-user div {
   justify-content: center;
+  margin-left: 1rem;
 }
 .sidebar-user strong {
   font-weight: 500;
@@ -218,6 +221,52 @@
   margin: 0 0.6rem 0 0;
   font-weight: 300;
   color: rgb(145, 145, 145);
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  flex-direction: column;
+}
+
+.suggestions-header {
+  padding: 1.2rem 0 0.4rem 0;
+}
+
+.suggestions-header > strong {
+  font-weight: 500;
+}
+
+.suggestion,
+.suggestions-header {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.suggestion {
+  height: 3.4rem;
+}
+
+.suggestion-content {
+  align-items: center;
+}
+.suggestion-content div {
+  margin-left: 0.8rem;
+  flex-direction: column;
+}
+.suggestion-content strong,
+.suggestion-content p {
+  font-weight: 500;
+}
+.suggestion-content p {
+  margin: 0;
+  color: rgb(145, 145, 145);
+}
+
+.follow-button {
+  align-items: center;
+  font-weight: 900;
+  color: #139EF2;
 }
 
 .root {
