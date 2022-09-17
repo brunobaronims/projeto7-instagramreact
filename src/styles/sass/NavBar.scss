@@ -29,7 +29,9 @@
     }
 }
 
-.navbar-logo, .navbar-icons, .navbar-content {
+.navbar-logo,
+.navbar-icons,
+.navbar-content {
     align-items: center;
     justify-content: space-between;
 }
@@ -40,6 +42,12 @@
 
 .navbar-logo {
     width: 10.5rem;
+
+    div {
+        width: 0.07rem;
+        height: 1.6rem;
+        background-color: #DBDBDB;
+    }
 }
 
 .navbar-icons {

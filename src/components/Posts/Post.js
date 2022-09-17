@@ -22,8 +22,10 @@ export default function Post({ data }) {
         </div>
         <div className='caption-bottom'>
           <img alt='Caption' src={data.caption.image} />
-          Curtido por {data.caption.likes.latest}
-            e outras {data.caption.likes.total} pessoas
+          <div>
+            Curtido por <strong>{data.caption.likes.latest} </strong>
+              e <strong>outras {data.caption.likes.total} pessoas</strong>
+          </div>
         </div>
       </div>
     </li>

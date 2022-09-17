@@ -8,7 +8,7 @@
         "caption": {
             "image": "./img/respondeai.svg",
             "likes": {
-                "latest": "respondeai ",
+                "latest": "respondeai",
                 "total": "101523"
             }
         }
@@ -22,7 +22,7 @@
         "caption": {
             "image": "./img/adorable_animals.svg",
             "likes": {
-                "latest": "adorable_animals ",
+                "latest": "adorable_animals",
                 "total": "99159"
             }
         }

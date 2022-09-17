@@ -4,6 +4,74 @@
     margin-top: 6rem;
 }
 
+.posts-container ul {
+    width: 100%;
+}
+
+.post {
+    margin-top: 2rem;
+    border-radius: 0.3rem;
+    border: 0.08rem solid #DBDBDB;
+}
+
+.post-header {
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    padding: 0 1rem;
+
+    div {
+        align-items: center;
+        justify-content: space-between;
+        width: 6.8rem;
+    }
+
+    img {
+        height: auto;
+        width: 2.3rem;
+    }
+
+    p {
+        margin: 0;
+        height: fit-content;
+        font-weight: 500;
+    }
+}
+
+.post-image img {
+    height: auto;
+    width: 100%;
+}
+
+.post-caption {
+    padding: 0 1rem;
+}
+
+.caption-top {
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    font-size: 1.71rem;
+
+    div {
+        width: 6.7rem;
+        justify-content: space-between;
+    }
+}
+
+.caption-bottom {
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    white-space: pre;
+
+    img {
+        height: auto;
+        width: 1.45rem;
+        margin-right: 0.65rem;
+    }
+}
+
 .stories-container ul {
     margin: 0;
     position: relative;
@@ -31,11 +99,11 @@
     p {
         margin: 0;
         font-size: 0.85rem;
-        color: #000;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 66px;
         display: block;
+        font-weight: 500;
     }
 
     img, ion-icon {

@@ -4,6 +4,7 @@ export default function NavBar() {
       <div className='navbar-content'>  
         <div className='navbar-logo'>
           <ion-icon name="logo-instagram" />
+          <div />
           <img src='./img/logo.png' alt='Logo' />
         </div>
         <input placeholder='Pesquisar'></input>

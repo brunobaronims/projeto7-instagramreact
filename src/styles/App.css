@@ -26,7 +26,9 @@
   outline: none;
 }
 
-.navbar-logo, .navbar-icons, .navbar-content {
+.navbar-logo,
+.navbar-icons,
+.navbar-content {
   align-items: center;
   justify-content: space-between;
 }
@@ -38,6 +40,11 @@
 .navbar-logo {
   width: 10.5rem;
 }
+.navbar-logo div {
+  width: 0.07rem;
+  height: 1.6rem;
+  background-color: #DBDBDB;
+}
 
 .navbar-icons {
   width: 8.5rem;
@@ -47,6 +54,69 @@
   justify-content: space-between;
   width: 50rem;
   margin-top: 6rem;
+}
+
+.posts-container ul {
+  width: 100%;
+}
+
+.post {
+  margin-top: 2rem;
+  border-radius: 0.3rem;
+  border: 0.08rem solid #DBDBDB;
+}
+
+.post-header {
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  padding: 0 1rem;
+}
+.post-header div {
+  align-items: center;
+  justify-content: space-between;
+  width: 6.8rem;
+}
+.post-header img {
+  height: auto;
+  width: 2.3rem;
+}
+.post-header p {
+  margin: 0;
+  height: fit-content;
+  font-weight: 500;
+}
+
+.post-image img {
+  height: auto;
+  width: 100%;
+}
+
+.post-caption {
+  padding: 0 1rem;
+}
+
+.caption-top {
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  font-size: 1.71rem;
+}
+.caption-top div {
+  width: 6.7rem;
+  justify-content: space-between;
+}
+
+.caption-bottom {
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  white-space: pre;
+}
+.caption-bottom img {
+  height: auto;
+  width: 1.45rem;
+  margin-right: 0.65rem;
 }
 
 .stories-container ul {
@@ -73,11 +143,11 @@
 .stories-container ul p {
   margin: 0;
   font-size: 0.85rem;
-  color: #000;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 66px;
   display: block;
+  font-weight: 500;
 }
 .stories-container ul img, .stories-container ul ion-icon {
   display: block;
@@ -135,7 +205,7 @@ body {
   padding: 0;
   background-color: #FAFAFA;
   font-family: "Roboto", sans-serif;
-  color: #262626;
+  color: rgb(38, 38, 38);
   font-weight: 400;
   font-size: 14px;
 }
