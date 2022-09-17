@@ -52,7 +52,7 @@
 
 .all-content {
   justify-content: space-between;
-  width: 50rem;
+  width: 70rem;
   margin-top: 6rem;
 }
 
@@ -61,9 +61,13 @@
 }
 
 .post {
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-radius: 0.3rem;
   border: 0.08rem solid #DBDBDB;
+}
+
+.post:last-child {
+  margin-bottom: 4rem;
 }
 
 .post-header {
@@ -117,6 +121,9 @@
   height: auto;
   width: 1.45rem;
   margin-right: 0.65rem;
+}
+.caption-bottom strong {
+  font-weight: 900;
 }
 
 .stories-container ul {
@@ -180,8 +187,37 @@
   flex-direction: column;
 }
 
-.posts-section, .sidebar-section {
+.posts-section {
   justify-content: space-evenly;
+}
+
+.sidebar-section {
+  height: 36rem;
+  padding-top: 1.8rem;
+}
+
+.sidebar, .sidebar-user div {
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 24rem;
+}
+
+.sidebar-user {
+  width: 11.5rem;
+  justify-content: space-between;
+}
+.sidebar-user div {
+  justify-content: center;
+}
+.sidebar-user strong {
+  font-weight: 500;
+}
+.sidebar-user p {
+  margin: 0 0.6rem 0 0;
+  font-weight: 300;
+  color: rgb(145, 145, 145);
 }
 
 .root {

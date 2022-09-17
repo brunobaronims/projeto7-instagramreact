@@ -24,7 +24,7 @@ export default function Post({ data }) {
           <img alt='Caption' src={data.caption.image} />
           <div>
             Curtido por <strong>{data.caption.likes.latest} </strong>
-              e <strong>outras {data.caption.likes.total} pessoas</strong>
+              e <strong>outras {Number(data.caption.likes.total).toLocaleString('pt-BR')} pessoas</strong>
           </div>
         </div>
       </div>
