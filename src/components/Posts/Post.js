@@ -1,4 +1,34 @@
-export default function Post({ data, state, click}) {
+import { useReducer } from 'react';
+
+export default function Post({ data }) {
+  const initialState = {
+    likeClicked: false,
+    likeName: 'heart-outline',
+    likeClass: 'md hydrated',
+    bookmarkClicked: false,
+    bookmarkName: 'bookmark-outline'
+  };
+  const [postState, dispatch] = useReducer(handleClick, initialState);
+
+  function handleClick(state, button) {
+    switch (button.type) {
+      case 'likeButton':
+        if (!state.likeClicked) {
+          return { ...state, likeClicked: true, likeName: 'heart', likeClass: 'heart md hydrated' };
+        } else {
+          return { ...state, likeClicked: false, likeName: 'heart-outline', likeClass: 'md hydrated' };
+        };
+      case 'bookmarkButton':
+        if (!state.bookmarkClicked) {
+          return { ...state, bookmarkClicked: true, bookmarkName: 'bookmark' };
+        } else {
+          return { ...state, bookmarkClicked: false, bookmarkName: 'bookmark-outline' };
+        }
+      default:
+        throw new Error();
+    };
+  }
+
   return (
     <li className='post'>
       <div className='post-header'>
@@ -14,14 +44,14 @@ export default function Post({ data, state, click}) {
       <div className='post-caption'>
         <div className='caption-top'>
           <div>
-            <button onClick={() => click({type: 'likeButton'})} className='like-button'>
-              <ion-icon class={state.likeClass} name={state.likeName} />
+            <button onClick={() => dispatch({type: 'likeButton'})} className='like-button'>
+              <ion-icon class={postState.likeClass} name={postState.likeName} />
             </button>
             <ion-icon name="chatbubble-outline" />
             <ion-icon name="paper-plane-outline" />
           </div>
-          <button onClick={() => click({type: 'bookmarkButton'})} className='bookmark-button'>
-            <ion-icon name={state.bookmarkName} />
+          <button onClick={() => dispatch({type: 'bookmarkButton'})} className='bookmark-button'>
+            <ion-icon name={postState.bookmarkName} />
           </button>
         </div>
         <div className='caption-bottom'>
