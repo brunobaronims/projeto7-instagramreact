@@ -1,0 +1,130 @@
+.sidebar,
+.sidebar-user div {
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 21rem;
+}
+
+.sidebar-user {
+    max-width: 100%;
+
+    img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 2rem;
+    }
+
+    div {
+        justify-content: center;
+        margin-left: 1rem;
+    }
+
+    strong {
+        font-weight: 500;
+    }
+
+    span {
+        align-items: center;
+        max-width: 16rem;
+    }
+
+    p {
+        display: block;
+        margin: 0 0.6rem 0 0;
+        font-weight: 300;
+        color: rgb(145, 145, 145);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    ion-icon {
+        font-size: 1.6rem;
+    }
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+}
+
+.suggestions-header {
+    padding: 1.2rem 0 0.4rem 0;
+}
+
+.suggestions-header>strong {
+    font-weight: 500;
+}
+
+.suggestion,
+.suggestions-header {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.suggestion {
+    height: 3.4rem;
+}
+
+.suggestion-content {
+    align-items: center;
+
+    div {
+        margin-left: 0.8rem;
+        flex-direction: column;
+    }
+
+    strong,
+    p {
+        font-weight: 500;
+    }
+
+    p {
+        width: fit-content;
+        margin: 0;
+        color: rgb(145, 145, 145);
+    }
+}
+
+.follow-button {
+    align-items: center;
+    font-weight: 900;
+    color: #139EF2;
+}
+
+.links {
+    flex-wrap: wrap;
+    white-space: pre;
+    margin-top: 2rem;
+}
+
+.links div:not(:last-child):after {
+    content: ' • ';
+}
+
+.links div,
+.link,
+.copyright {
+    color: rgb(189, 188, 188);
+    font-weight: 500;
+}
+
+.links div {
+    align-items: center;
+    font-size: 0.75rem;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-bottom: 0;
+    font-size: 0.75rem;
+}

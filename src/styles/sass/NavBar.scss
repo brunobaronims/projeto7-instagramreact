@@ -1,11 +1,20 @@
-.navbar {
+
+.navbar, .navbar-mobile {
     position: fixed;
-    top: 0;
     z-index: 2;
     width: 100%;
     justify-content: center;
     height: 4rem;
     background-color: #FFF;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+.navbar {
+    top: 0;
+    left: 0;
     border-bottom: 0.1rem solid #DBDBDB;
     font-size: 1.6rem;
 
@@ -37,7 +46,7 @@
 }
 
 .navbar-content {
-    width: 60rem;
+    width: 75rem;
 }
 
 .navbar-logo {
@@ -52,4 +61,12 @@
 
 .navbar-icons {
     width: 8.5rem;
+}
+
+.navbar-mobile {
+    display: none!important;
+    border-top: 0.1rem solid #DBDBDB;
+    bottom: 0;
+    left: 0;
+    font-size: 1.8rem;
 }

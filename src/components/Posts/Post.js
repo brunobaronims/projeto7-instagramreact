@@ -2,10 +2,8 @@ import { useReducer } from 'react';
 
 export default function Post({ data }) {
   const initialState = {
-    likeClicked: false,
     likeName: 'heart-outline',
     likeClass: 'md hydrated',
-    bookmarkClicked: false,
     bookmarkName: 'bookmark-outline'
   };
   const [postState, dispatch] = useReducer(handleClick, initialState);
@@ -13,16 +11,16 @@ export default function Post({ data }) {
   function handleClick(state, button) {
     switch (button.type) {
       case 'likeButton':
-        if (!state.likeClicked) {
-          return { ...state, likeClicked: true, likeName: 'heart', likeClass: 'heart md hydrated' };
+        if (state.likeName === 'heart-outline') {
+          return { ...state, likeName: 'heart', likeClass: 'heart md hydrated' };
         } else {
-          return { ...state, likeClicked: false, likeName: 'heart-outline', likeClass: 'md hydrated' };
+          return { ...state, likeName: 'heart-outline', likeClass: 'md hydrated' };
         };
       case 'bookmarkButton':
-        if (!state.bookmarkClicked) {
-          return { ...state, bookmarkClicked: true, bookmarkName: 'bookmark' };
+        if (state.bookmarkName === 'bookmark-outline') {
+          return { ...state, bookmarkName: 'bookmark' };
         } else {
-          return { ...state, bookmarkClicked: false, bookmarkName: 'bookmark-outline' };
+          return { ...state, bookmarkName: 'bookmark-outline' };
         }
       default:
         throw new Error();

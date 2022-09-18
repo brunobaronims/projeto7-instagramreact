@@ -1,6 +1,8 @@
 @use 'NavBar';
-@use 'Corpo';
+@use 'Posts';
 @use 'Main';
+@use 'SideBar';
+@use 'Stories';
 
 html,
 body {
@@ -15,4 +17,88 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+
+@media (max-width: 75rem) {
+    .sidebar-section {
+        display: none;
+    }
+
+    .all-content {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .navbar-content {
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 38.8rem) {
+    .all-content {
+        margin-top: 4rem;
+    }
+
+    .posts-section,
+    .navbar-content {
+        width: 100%;
+    }
+
+    .navbar-mobile {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .navbar-logo div,
+    .navbar-content input {
+        display: none;
+    }
+
+    .stories-container ul,
+    .navbar-content,
+    .navbar,
+    .navbar-mobile,
+    .caption-bottom,
+    .caption-top,
+    .post-header {
+        overflow: hidden;
+    }
+
+    .navbar-logo {
+        width: fit-content;
+
+        img {
+            display: none;
+        }
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
+    .navbar-icons {
+        width: fit-content;
+
+        ion-icon {
+            display: none;
+        }
+    }
+
+    .navbar-message {
+        display: block !important;
+    }
+
+    .post {
+        width: 100%;
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+    }
+
+    .post:first-child {
+        margin-top: 0;
+    }
 }

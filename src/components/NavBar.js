@@ -7,9 +7,10 @@ export default function NavBar() {
           <div />
           <img src='./img/logo.png' alt='Logo' />
         </div>
+        <img src='./img/logo.png' className='mobile-logo' alt='Mobile Logo' />
         <input placeholder='Pesquisar'></input>
         <div className='navbar-icons'>
-          <ion-icon name="paper-plane-outline" />
+          <ion-icon class='navbar-message' name="paper-plane-outline" />
           <ion-icon name="compass-outline" />
           <ion-icon name="heart-outline" />
           <ion-icon name="person-outline" />

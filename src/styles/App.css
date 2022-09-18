@@ -1,12 +1,20 @@
 @charset "UTF-8";
-.navbar {
+.navbar, .navbar-mobile {
   position: fixed;
-  top: 0;
   z-index: 2;
   width: 100%;
   justify-content: center;
   height: 4rem;
   background-color: #FFF;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.navbar {
+  top: 0;
+  left: 0;
   border-bottom: 0.1rem solid #DBDBDB;
   font-size: 1.6rem;
 }
@@ -35,7 +43,7 @@
 }
 
 .navbar-content {
-  width: 60rem;
+  width: 75rem;
 }
 
 .navbar-logo {
@@ -51,10 +59,12 @@
   width: 8.5rem;
 }
 
-.all-content {
-  justify-content: space-between;
-  width: 67rem;
-  margin-top: 6rem;
+.navbar-mobile {
+  display: none !important;
+  border-top: 0.1rem solid #DBDBDB;
+  bottom: 0;
+  left: 0;
+  font-size: 1.8rem;
 }
 
 .posts-container ul {
@@ -118,11 +128,32 @@
   border: none;
   background-color: #FFF;
 }
+.caption-top button :focus {
+  outline: none;
+}
 
 .heart {
   color: rgb(218, 89, 89);
+  animation: bounce 0.4s linear;
 }
 
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.3);
+  }
+  50% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .caption-bottom {
   align-items: center;
   margin-bottom: 1rem;
@@ -138,64 +169,43 @@
   font-weight: 900;
 }
 
-.stories-container ul {
-  margin: 0;
-  position: relative;
-  align-items: center;
-  border-radius: 0.3rem;
-  border: 0.1rem solid #DBDBDB;
-  height: 8.5rem;
-}
-.stories-container ul ion-icon {
-  display: block;
-  font-size: 2rem;
-  position: absolute;
-  color: #FFF;
-  right: 1rem;
-  filter: drop-shadow(0 0 0.1rem rgb(120, 120, 120));
+.root {
+  display: flex;
+  justify-content: center;
 }
 
-.story {
+.root * {
+  display: flex;
+}
+
+.app {
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  width: 5.4rem;
+}
+
+.all-content {
   justify-content: space-between;
-  height: 6rem;
-}
-.story p {
-  margin: 0;
-  font-size: 0.85rem;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 66px;
-  display: block;
-  font-weight: 500;
-}
-.story img {
-  display: block;
-  position: absolute;
-  margin: 5px 0 0 5px;
+  width: 67rem;
+  margin-top: 6rem;
 }
 
-.story:first-child {
-  margin-left: 0.8rem;
-}
-
-.story:last-child {
-  margin-right: 0.8rem;
-}
-
-.story-background {
-  position: relative !important;
-  top: 0 !important;
-  left: 0 !important;
-  margin: 0 !important;
-}
-
-.stories-container ul,
-.posts-container ul {
-  margin: 0;
-  padding: 0;
+.link,
+.suggestions-header strong:last-child,
+.follow-button,
+.suggestion-content div strong,
+.suggestion-content div p,
+.sidebar-user img,
+.sidebar-user strong,
+ion-icon,
+.navbar-logo img,
+.story p,
+.story-image img:last-child,
+.post-header img,
+.post-header p,
+.post-caption img,
+.post-caption strong {
+  cursor: pointer;
 }
 
 .post,
@@ -204,6 +214,12 @@
 .sidebar-section,
 .post-caption {
   flex-direction: column;
+}
+
+.stories-container ul,
+.posts-container ul {
+  margin: 0;
+  padding: 0;
 }
 
 .posts-section {
@@ -337,37 +353,55 @@
   font-size: 0.75rem;
 }
 
-.root {
-  display: flex;
-  justify-content: center;
+.stories-container ul {
+  margin: 0;
+  position: relative;
+  align-items: center;
+  border-radius: 0.3rem;
+  border: 0.1rem solid #DBDBDB;
+  height: 8.5rem;
+}
+.stories-container ul ion-icon {
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  color: #FFF;
+  right: 1rem;
+  filter: drop-shadow(0 0 0.1rem rgb(120, 120, 120));
 }
 
-.root * {
-  display: flex;
-}
-
-.app {
-  width: 100%;
+.story {
   flex-direction: column;
   align-items: center;
+  width: fit-content;
+  margin-right: 0.7rem;
+  justify-content: space-between;
+  height: 6rem;
+}
+.story p {
+  margin: 0;
+  font-size: 0.85rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 66px;
+  display: block;
+  font-weight: 500;
+}
+.story img {
+  display: block;
+  position: absolute;
+  margin: 5px 0 0 5px;
 }
 
-.link,
-.suggestions-header strong:last-child,
-.follow-button,
-.suggestion-content div strong,
-.suggestion-content div p,
-.sidebar-user img,
-.sidebar-user strong,
-ion-icon,
-.navbar-logo img,
-.story p,
-.story-image img:last-child,
-.post-header img,
-.post-header p,
-.post-caption img,
-.post-caption strong {
-  cursor: pointer;
+.story:first-child {
+  margin-left: 1.2rem;
+}
+
+.story-background {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 !important;
 }
 
 html,
@@ -383,6 +417,74 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 75rem) {
+  .sidebar-section {
+    display: none;
+  }
+  .all-content {
+    justify-content: center;
+    width: 100%;
+  }
+  .navbar-content {
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 38.8rem) {
+  .all-content {
+    margin-top: 4rem;
+  }
+  .posts-section,
+.navbar-content {
+    width: 100%;
+  }
+  .navbar-mobile {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  .navbar-logo div,
+.navbar-content input {
+    display: none;
+  }
+  .stories-container ul,
+.navbar-content,
+.navbar,
+.navbar-mobile,
+.caption-bottom,
+.caption-top,
+.post-header {
+    overflow: hidden;
+  }
+  .navbar-logo {
+    width: fit-content;
+  }
+  .navbar-logo img {
+    display: none;
+  }
+  .mobile-logo {
+    display: block;
+  }
+  .navbar-icons {
+    width: fit-content;
+  }
+  .navbar-icons ion-icon {
+    display: none;
+  }
+  .navbar-message {
+    display: block !important;
+  }
+  .post {
+    width: 100%;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
+  .post:first-child {
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */

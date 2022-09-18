@@ -13,6 +13,11 @@
     align-items: center;
 }
 
+.all-content {
+    justify-content: space-between;
+    width: 67rem;
+    margin-top: 6rem;
+}
 
 .link,
 .suggestions-header strong:last-child,
@@ -30,4 +35,27 @@ ion-icon,
 .post-caption img,
 .post-caption strong {
     cursor: pointer;
+}
+
+.post,
+.posts-container ul,
+.posts-section,
+.sidebar-section,
+.post-caption {
+    flex-direction: column;
+}
+
+.stories-container ul,
+.posts-container ul {
+    margin: 0;
+    padding: 0;
+}
+
+.posts-section {
+    justify-content: space-evenly;
+}
+
+.sidebar-section {
+    height: 36rem;
+    padding-top: 1.8rem;
 }
