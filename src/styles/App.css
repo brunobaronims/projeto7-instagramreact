@@ -211,6 +211,14 @@
   width: 21rem;
 }
 
+.sidebar-user {
+  max-width: 100%;
+}
+.sidebar-user img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 2rem;
+}
 .sidebar-user div {
   justify-content: center;
   margin-left: 1rem;
@@ -218,10 +226,20 @@
 .sidebar-user strong {
   font-weight: 500;
 }
+.sidebar-user span {
+  align-items: center;
+  max-width: 16rem;
+}
 .sidebar-user p {
+  display: block;
   margin: 0 0.6rem 0 0;
   font-weight: 300;
   color: rgb(145, 145, 145);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sidebar-user ion-icon {
+  font-size: 1.6rem;
 }
 
 .sidebar ul {

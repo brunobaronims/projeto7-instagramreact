@@ -1,16 +1,22 @@
-export default function Usuario({data}) {
+export default function Usuario({ changeImage, changeName, data }) {
+  Object.entries(data).forEach(item => {
+    if (!localStorage.getItem(item[0])) {
+      localStorage.setItem(item[0], item[1]);
+    }
+  });
+
   return (
     <div className='sidebar-user'>
-      <img alt='User' src={data.image} />
+      <img onClick={changeImage} alt='User' src={localStorage.getItem('image')} />
       <div>
         <strong>
-          {data.profile}
+          {localStorage.getItem('profile')}
         </strong>
         <span>
           <p>
-            {data.name}
+            {localStorage.getItem('name')}
           </p>
-          <ion-icon name="pencil-outline"></ion-icon>
+          <ion-icon onClick={changeName} name="pencil-outline"></ion-icon>
         </span>
       </div>
     </div>

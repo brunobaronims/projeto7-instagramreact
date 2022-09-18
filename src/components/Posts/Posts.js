@@ -1,4 +1,5 @@
 import Post from './Post';
+import { useState } from 'react';
 
 export default function Posts() {
   const data = require('./PostsData.json');
