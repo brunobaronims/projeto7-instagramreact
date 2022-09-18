@@ -1,4 +1,4 @@
-export default function Post({ data }) {
+export default function Post({ data, state, click}) {
   return (
     <li className='post'>
       <div className='post-header'>
@@ -14,11 +14,15 @@ export default function Post({ data }) {
       <div className='post-caption'>
         <div className='caption-top'>
           <div>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="chatbubble-outline"></ion-icon>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+            <button onClick={() => click({type: 'likeButton'})} className='like-button'>
+              <ion-icon class={state.likeClass} name={state.likeName} />
+            </button>
+            <ion-icon name="chatbubble-outline" />
+            <ion-icon name="paper-plane-outline" />
           </div>
-          <ion-icon name="bookmark-outline" />
+          <button onClick={() => click({type: 'bookmarkButton'})} className='bookmark-button'>
+            <ion-icon name={state.bookmarkName} />
+          </button>
         </div>
         <div className='caption-bottom'>
           <img alt='Caption' src={data.caption.image} />

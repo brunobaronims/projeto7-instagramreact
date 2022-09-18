@@ -109,6 +109,19 @@
   width: 6.7rem;
   justify-content: space-between;
 }
+.caption-top button {
+  font-size: 1.71rem;
+  height: 1.71rem;
+  width: 1.71rem;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: #FFF;
+}
+
+.heart {
+  color: rgb(218, 89, 89);
+}
 
 .caption-bottom {
   align-items: center;
