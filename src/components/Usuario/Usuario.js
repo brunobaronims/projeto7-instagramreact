@@ -23,6 +23,8 @@ export default function Usuario({ data }) {
         if (button.payload) {
           return { ...state, name: button.payload };
         } return {...state};
+      default: 
+        throw new Error();
     };
   }
 
