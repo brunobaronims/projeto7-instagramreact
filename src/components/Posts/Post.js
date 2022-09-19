@@ -1,9 +1,11 @@
 import { useReducer } from 'react';
 
 export default function Post({ data }) {
+
   const initialState = {
     likeName: 'heart-outline',
     likeClass: 'md hydrated',
+    likeTotal: Number(data.caption.likes.total),
     bookmarkName: 'bookmark-outline'
   };
   const [postState, dispatch] = useReducer(handleClick, initialState);
@@ -12,9 +14,9 @@ export default function Post({ data }) {
     switch (button.type) {
       case 'likeButton':
         if (state.likeName === 'heart-outline') {
-          return { ...state, likeName: 'heart', likeClass: 'heart md hydrated' };
+          return { ...state, likeTotal: button.payload+1, likeName: 'heart', likeClass: 'heart md hydrated' };
         } else {
-          return { ...state, likeName: 'heart-outline', likeClass: 'md hydrated' };
+          return { ...state, likeTotal: button.payload-1, likeName: 'heart-outline', likeClass: 'md hydrated' };
         };
       case 'bookmarkButton':
         if (state.bookmarkName === 'bookmark-outline') {
@@ -42,7 +44,7 @@ export default function Post({ data }) {
       <div className='post-caption'>
         <div className='caption-top'>
           <div>
-            <button onClick={() => dispatch({type: 'likeButton'})} className='like-button'>
+            <button onClick={() => dispatch({type: 'likeButton', payload: postState.likeTotal})} className='like-button'>
               <ion-icon class={postState.likeClass} name={postState.likeName} />
             </button>
             <ion-icon name="chatbubble-outline" />
@@ -56,7 +58,7 @@ export default function Post({ data }) {
           <img alt='Caption' src={data.caption.image} />
           <div>
             Curtido por <strong>{data.caption.likes.latest} </strong>
-              e <strong>outras {Number(data.caption.likes.total).toLocaleString('pt-BR')} pessoas</strong>
+              e <strong>outras {postState.likeTotal.toLocaleString('pt-br')} pessoas</strong>
           </div>
         </div>
       </div>
