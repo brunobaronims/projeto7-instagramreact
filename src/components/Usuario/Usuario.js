@@ -1,22 +1,45 @@
-export default function Usuario({ changeImage, changeName, data }) {
-  Object.entries(data).forEach(item => {
-    if (!localStorage.getItem(item[0])) {
-      localStorage.setItem(item[0], item[1]);
+import { useReducer } from "react";
+
+export default function Usuario({ data }) {
+  const initialState = data;
+
+  const checkURL = () => {
+    try {
+      const url = new URL(prompt('URL da nova imagem:'));
+      return url;
+    } catch(error) {
+      alert('Insira um URL válido.')
+      return false;
     }
-  });
+  }
+  
+  const handleClick = (state, button) => {
+    switch (button.type) {
+      case 'image':
+        if (button.payload) {
+          return { ...state, image: button.payload };
+        } return {...state};
+      case 'userName':
+        if (button.payload) {
+          return { ...state, name: button.payload };
+        } return {...state};
+    };
+  }
+
+  const [state, dispatch] = useReducer(handleClick, initialState);
 
   return (
     <div className='sidebar-user'>
-      <img onClick={changeImage} alt='User' src={localStorage.getItem('image')} />
+      <img onClick={() => dispatch({type: 'image', payload: checkURL()})} alt='User' src={state.image} />
       <div>
         <strong>
-          {localStorage.getItem('profile')}
+          {state.profile}
         </strong>
         <span>
           <p>
-            {localStorage.getItem('name')}
+            {state.name}
           </p>
-          <ion-icon onClick={changeName} name="pencil-outline"></ion-icon>
+          <ion-icon onClick={() => dispatch({type: 'userName', payload: prompt('Novo nome:')})} name="pencil-outline"></ion-icon>
         </span>
       </div>
     </div>

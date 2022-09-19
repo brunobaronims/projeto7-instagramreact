@@ -8,9 +8,7 @@ export default function Post({ data }) {
     likeTotal: Number(data.caption.likes.total),
     bookmarkName: 'bookmark-outline'
   };
-  const [postState, dispatch] = useReducer(handleClick, initialState);
-
-  function handleClick(state, button) {
+  const handleClick = (state, button) => {
     switch (button.type) {
       case 'likeButton':
         if (state.likeName === 'heart-outline') {
@@ -26,9 +24,10 @@ export default function Post({ data }) {
         }
       default:
         throw new Error();
-    };
+      };
   }
-
+  const [postState, dispatch] = useReducer(handleClick, initialState);
+  
   return (
     <li className='post'>
       <div className='post-header'>
